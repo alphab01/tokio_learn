@@ -4,9 +4,7 @@ use mini_redis::{client, Result};
 async fn main() -> Result<()> {
   let mut cli = client::connect("127.0.0.1:6379").await?;
   cli.set("hello", "world".into()).await?;
-  cli.set("goodbye", "bye".into()).await?;
 
-  let res = cli.get("goodbye").await?;
   let res  = cli.get("hello").await?;
   println!("Server says: {:?}", res);
 
