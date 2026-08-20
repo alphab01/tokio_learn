@@ -2,6 +2,7 @@
 name = "my-redis"
 version = "0.1.0"
 edition = "2024"
+exclude = ["r*"]
 
 [dependencies]
 tokio = {version = "1", features = ["full"]}
